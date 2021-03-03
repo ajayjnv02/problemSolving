@@ -3,20 +3,32 @@ package array;
 import java.util.*;
 
 class ValidateSubSequence {
-	public static boolean isValidSubsequence(List<Integer> array, List<Integer> sequence) {
-		int seq_i = 0;
+	public static int[] sortedSquaredArray(int[] array) {
+		int min = 0;
+		int max = array.length - 1;
+		int j = array.length - 1;
+		int[] sortedSquare = new int[array.length];
+		
+		
+		while (min <= max) {
+			if (Math.abs(array[min]) > Math.abs(array[max])) {
 
-		for (int i = 0; i < array.size() && seq_i < sequence.size(); i++) {
+				sortedSquare[j] = array[min] * array[min];
+				min++;
+				j--;
+			} else {
 
-			if (array.get(i).equals(sequence.get(seq_i))) {
-				seq_i++;
+				sortedSquare[j] = array[max] * array[max];
+				max--;
+				j--;
 			}
-
 		}
-		if (seq_i == sequence.size()) {
-			return true;
-		}
-		return false;
+		return sortedSquare;
 	}
-
+	public static void main(String[] args) {
+		 int[] temp=sortedSquaredArray(new int[] {1,2,3,4,5,6});
+		 for (int i = 0; i < temp.length; i++) {
+			System.out.println(temp[i]);
+		}
+	}
 }
