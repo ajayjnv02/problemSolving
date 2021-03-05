@@ -13,11 +13,19 @@ public class LongestPeak {
 				if (lengthAndRightSlopeLength.get(0) > max) {
 					max = lengthAndRightSlopeLength.get(0);
 				}
+				
 			}
+			
 		}
 		return max;
 	}
 
+	/**
+	 * 
+	 * @param a
+	 * @param i
+	 * @return
+	 */
 	private static List<Integer> calculateLength(int[] a, int i) {
 		int rightSlopeLength = 0;
 		int leftSlopeLength = 0;
@@ -29,7 +37,7 @@ public class LongestPeak {
 				break;
 			}
 		}
-		for (int k = i; k < a.length-1; k++) {
+		for (int k = i; k < a.length - 1; k++) {
 			if (a[k] > a[k + 1]) {
 				rightSlopeLength++;
 			} else {
@@ -45,16 +53,15 @@ public class LongestPeak {
 	 * O(1) time
 	 */
 	private static boolean checkIfPeak(int[] array, int i) {
-		boolean flag= (array[i] > array[i + 1]) && array[i] > array[i - 1];
+		return (array[i] > array[i + 1]) && array[i] > array[i - 1];
 
-		return flag;
+		
 	}
 
 	public static void main(String[] args) {
-		int temp = longestPeak(new int[] {1,1,3,2,1});
-	
-			System.out.println(temp);
-	
+		int temp = longestPeak(new int[] { 1, 1, 3, 2, 1 });
+		System.out.println(temp);
+
 	}
 
 }
