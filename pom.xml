@@ -20,6 +20,8 @@
         <module>array</module>
         <module>string</module>
         <module>dynamic</module>
+		<module>linkedlist</module>
+		<module>tree</module>
     </modules>
  <build>
         <plugins>
