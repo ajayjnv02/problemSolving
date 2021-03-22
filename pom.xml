@@ -22,6 +22,8 @@
         <module>dynamic</module>
 		<module>linkedlist</module>
 		<module>tree</module>
+		<module>maths</module>
+		<module>greedy</module>
     </modules>
  <build>
         <plugins>
