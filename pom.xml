@@ -24,6 +24,7 @@
 		<module>tree</module>
 		<module>maths</module>
 		<module>greedy</module>
+		<module>designpattern</module>
     </modules>
  <build>
         <plugins>
